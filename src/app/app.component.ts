@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular';
+  initalCount = 0;
+  getName(name:string){
+    alert('clicked');
+  }
+
+  count(event:string){
+    
+    switch (event) {
+      case "increase":
+          this.initalCount++;
+        break;
+    
+      default:
+        (this.initalCount > 0 ) ?this.initalCount-- : this.initalCount = 0;
+        break;
+    }
+  }
 }
