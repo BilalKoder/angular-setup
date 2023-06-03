@@ -7,10 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular';
+  disable = true
   initalCount = 0;
+  showCounter= true;
   getName(name:string){
-    alert('clicked');
+    // alert('clicked');
+    this.showCounter = (this.showCounter) ? false: true;
   }
+
 
   count(event:string){
     
